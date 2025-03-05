@@ -4,4 +4,4 @@ metadata:
   name: myconfig
 data:
   cource: "kubernetes"
-  duration: "120hrs"
+  duration: "130hrs"
