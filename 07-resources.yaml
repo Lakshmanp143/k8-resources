@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: resources
+  namespace: expense
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
+      requests:
+        memory: "64mi"
+        cpu: "250m"
+      limits:
+        memory: "128mi"
+        cpu: "500m"
+    env:
+    - name: cource
+      value: Devops
+    - name: trainer
+      value: Siva
+        
+
