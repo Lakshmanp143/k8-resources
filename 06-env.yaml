@@ -13,4 +13,4 @@ spec:
     - name: duration
       value: 120hrs
     - name: trainer
-      values: Siva
+      value: Siva
