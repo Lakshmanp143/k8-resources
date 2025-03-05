@@ -10,16 +10,16 @@ spec:
     resources:
       #soft limit
       requests:
-        memory: "64mi"
+        memory: "64Mi"
         cpu: "100m"
       #hard limit
       limits:
-        memory: "128mi"
+        memory: "128Mi"
         cpu: "200m"
-    # env:
-    # - name: cource
-    #   value: Devops
-    # - name: trainer
-    #   value: Siva
+    env:
+    - name: cource
+      value: Devops
+    - name: trainer
+      value: Siva
         
 
