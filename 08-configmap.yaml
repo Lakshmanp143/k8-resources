@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: myconfig
-data:
-  cource: "kubernetes"
-  duration: "130hrs"
