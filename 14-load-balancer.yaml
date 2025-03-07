@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   name: nginx-lb
 spec:
-  type: LodeBalancer
+  type: LoadBalancer
   selector:
     project: metro-bank
     environment: Dev
