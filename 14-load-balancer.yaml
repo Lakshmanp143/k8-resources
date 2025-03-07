@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx-lb
+spec:
+  type: LodeBalancer
+  selector:
+    project: metro-bank
+    environment: Dev
+    component: frontend
+    version: "1.0"
+    demo: lb
+  ports:  
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30007
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: frontend-lb
+  labels: 
+    project: metro-bank
+    environment: Dev
+    component: frontend
+    version: "1.0"
+    deno: lb
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
