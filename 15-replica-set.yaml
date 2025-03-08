@@ -11,7 +11,7 @@ spec:
     matchLabels:  
       app: frontend
       tier: web
-  templete:
+  template:
     metadata:
       labels:
         app: frontend
