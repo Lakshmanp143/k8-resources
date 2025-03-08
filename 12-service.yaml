@@ -16,14 +16,17 @@ spec:
 ---
 apiVersion: v1
 kind: Pod
-metadata:
-  name: backed
-  labels:
+metadata: 
+  name: backend
+  labels: 
     project: expense
     environment: Dev
     component: backend
     version: "1.0"
 spec:
-  containers: 
+  containers:
   - name: nginx
     image: nginx
+  
+  
+
