@@ -11,5 +11,40 @@ spec:
     requests:
       storage: 20Gi
 
+---
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: nginx
+  labels:
+    purpose: "ebs-static-demo"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: persistant-storage
+      mountPath: /usr/share/nginx/html
+  volumes: 
+  - name: persistant-storage 
+    PersistentVolumeClaim: 
+      claimName: ebs-static
+---
+kind: Service 
+apiVersion: apps/v1 
+metadata: 
+  name: nginx 
+spec: 
+  type: LoadBalancer
+  selector: 
+    purpose: "ebs-static-demo"
+  ports: 
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30007
+
+  
+
 
 
