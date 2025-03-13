@@ -24,7 +24,6 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    command: ["sleep", "1000"]
     volumeMounts:
     - name: persistant-storage
       mountPath: /usr/share/nginx/html
