@@ -22,8 +22,9 @@ spec:
   nodeSelector:
     topology.kubernetes.io/zone: us-east-1b
   containers:
-  - name: nginx
-    image: nginx
+  - name: almalinux
+    image: almalinux:9
+    command: ["sleep", "1000"]
     volumeMounts:
     - name: persistant-storage
       mountPath: /usr/share/nginx/html
