@@ -29,7 +29,7 @@ spec:
   volumes:
   - name: persistant-storage
     persistentVolumeClaim:
-        claimName: ebs-staic
+      claimName: ebs-staic
 ---
 apiVersion: v1 
 kind: Service
